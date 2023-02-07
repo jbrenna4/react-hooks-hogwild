@@ -16,6 +16,7 @@ function HogTile({ name, image, specialty, weight, greased, }) {
               <img src = {image}></img>
               <h4>{specialty}</h4>
               <h4>{weight} lbs</h4>
+              <br></br>
               <button onClick={handleClick}>Close Info</button>
             </div>
           );
@@ -25,6 +26,7 @@ function HogTile({ name, image, specialty, weight, greased, }) {
                 <div className="pigTile">
                 <h3>{name}</h3>
                 <img src = {image}></img>
+                <br></br>               
                 <button onClick={handleClick}>More Info</button>
                 </div>
             );

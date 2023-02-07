@@ -6,10 +6,13 @@ import HogContainer from "./HogContainer"
 import hogs from "../porkers_data";
 
 
-//hogs.filter(hog => hog.greased === true).map(hogs => (
+    // const [checked, setChecked] = useState(false);
 
+    // const handleCheck = () => {
+    //     setChecked(!checked);
+    // };
 
-function App() {
+// const filteredHogs = hogs.filter(hog => hog.greased === true).map(hogs => (
 // 		if (checked === true) {
 // 		return (
 // 			<div className="App">
@@ -30,11 +33,19 @@ function App() {
 	
 	
 // 		}
-// }
 
+function App () {
 	return (
 		<div className="App">
 			<Nav />
+			{/* <label>
+                <input 
+                    type="checkbox" 
+                    checked={checked}
+                    onChange={handleCheck}
+                />
+                greased
+            </label> */}
 			<Search />
 			<HogContainer hogs = {hogs}/>
 		</div>

@@ -10,7 +10,7 @@ const HogContainer = ( {hogs} ) => {
            specialty = {hog.specialty} 
            greased = {hog.greased} 
            weight = {hog.weight}
-//           medal = {hog."highest medal achieved}
+           medal = {hog["highest medal achieved"]}
            image = {hog.image}
          />
      ));
