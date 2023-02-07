@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Search = () => {
 
@@ -7,6 +7,12 @@ const Search = () => {
         console.log(event.target.value)
       }
 
+    const [checked, setChecked] = useState(false);
+
+    const handleCheck = () => {
+        setChecked(!checked);
+    };
+
 	return (
 		<div>
             <select onChange={handleChange}>
@@ -14,7 +20,11 @@ const Search = () => {
                 <option value="weight">Weight</option>
             </select>
             <label>
-                <input type="checkbox" />
+                <input 
+                    type="checkbox" 
+                    checked={checked}
+                    onChange={handleCheck}
+                />
                 greased
             </label>
 		</div>
