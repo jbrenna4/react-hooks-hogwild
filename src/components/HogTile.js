@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 
 function HogTile({ name, image, specialty, weight, greased, }) {
 
+    const [hogExpansion, setHogExpansion] = useState([]);
 
-  return (
-    <div className="hog-item">
-      <h3>{name}</h3>
-      <img src = {image}></img>
-    </div>
-  );
+    function handleClick() {
+        setHogExpansion((hogExpansion) => !hogExpansion);
+    }
+
+    if (hogExpansion === true) {
+
+        return (
+            <div className="pigTile">
+              <h3>{name}</h3>
+              <img src = {image}></img>
+              <h4>{specialty}</h4>
+              <h4>{weight} lbs</h4>
+              <button onClick={handleClick}>Close Info</button>
+            </div>
+          );
+        }
+        else {
+            return (
+                <div className="pigTile">
+                <h3>{name}</h3>
+                <img src = {image}></img>
+                <button onClick={handleClick}>More Info</button>
+                </div>
+            );
+        }
 }
 
 
