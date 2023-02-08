@@ -13,6 +13,14 @@ const Search = () => {
         setChecked(!checked);
     };
 
+    
+    const pokemonsToDisplay = pokemon.filter((poke) =>
+
+    poke.name.toLowerCase().includes(searchTerm.toLowerCase())
+
+    );
+
+
 	return (
 		<div>
             <select onChange={handleChange}>

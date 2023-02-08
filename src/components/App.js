@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
-import Search from "./Search";
-import HogContainer from "./HogContainer"
+import HogContainer from "./HogForm"
 
 import hogs from "../porkers_data";
 
@@ -46,7 +45,6 @@ function App () {
                 />
                 greased
             </label> */}
-			<Search />
 			<HogContainer hogs = {hogs}/>
 		</div>
 	);
